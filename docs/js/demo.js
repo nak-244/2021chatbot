@@ -7,16 +7,19 @@
 
   //初期メッセージ
   botui.message.bot({
+    photo: true,
     delay: 300,
     content: "こんにちは！しごとらです。"
   })
   //初期メッセージ2
   botui.message.bot({
+    photo: true,
     delay: 500,
     content: "あなたのおすすめの求人を探すために、いくつか質問をさせてね！"
   })
   //初期メッセージ3
   botui.message.bot({
+    photo: true,
     delay: 1000,
     content: "質問の個数はどのくらいがいい？"
   })
@@ -43,11 +46,13 @@
   //サクッと
   function a1() {
     botui.message.bot({
+      photo: true,
       loading: true,
       delay: 800,
       content: "最初の質問です。"
     })
     botui.message.bot({
+      photo: true,
       delay: 1600,
       content: "どのエリアで働きたいですか？"
     })
@@ -104,6 +109,7 @@
   //サクッと北海道・東北
   function a111() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -155,6 +161,7 @@
   //サクッと関東
   function a112() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -206,6 +213,7 @@
   //サクッと北陸・甲信越
   function a113() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -254,6 +262,7 @@
   //サクッと東海・関西
   function a114() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -314,6 +323,7 @@
   //サクッと中国・四国
   function a115() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -371,6 +381,7 @@
   //サクッと九州・沖縄
   function a116() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -425,6 +436,7 @@
   //サクッと職種選択
   function a22() {
     botui.message.bot({
+      photo: true,
       delay: 300,
       content: "希望の職種を選んでください。"
     })
@@ -491,58 +503,16 @@
       .then(load);
   }
 
-  //サクッと最後のローディング
-  function load() {
-    //ローディング中のアイコンを表示
-    botui.message.bot({
-        loading: true,
-      })
-      .then(function(index) {
-
-        //ローディングアイコンのindexを取得
-        //このindexを使ってメッセージ情報を更新する
-        //（更新しないとローディングアイコンが消えないため…）
-        msgIndex = index;
-      });
-  }
-  //GitHubのリポジトリを取得する処理
-  function getRepositories(keyword) {
-    var xhr = new XMLHttpRequest();
-
-    xhr.open('GET', url + keyword);
-    xhr.onload = function() {
-      var result = JSON.parse(xhr.responseText);
-
-      //取得したリポジトリ数をshowMessage()に代入する
-      showMessage(result.total_count);
-    }
-    xhr.send();
-  }
-  //リポジトリ総数をメッセージに表示する処理
-  function showMessage(totalCount) {
-
-    //ローディングアイコンのindexを使ってメッセージを書き換える
-    botui.message.update(msgIndex, {
-      delay: 1000,
-      content: "あなたにオススメのお仕事が見つかりました！"
-    })
-    botui.message.bot({
-      // content: "https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_area_param=" + key
-      delay: 2000,
-      loading: true,
-      type: 'html', // this is 'text' by default
-      content: '<a href=https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_ken_param=' + key + '&srh_jobtype_param=' + key1 + '&srh_shift_param=' + keyb2 + ' target="_blank">おすすめ求人</a>'
-    });
-  }
-
   //じっくり
   function b1() {
     botui.message.bot({
+      photo: true,
       loading: true,
       delay: 800,
       content: "最初の質問です。"
     })
     botui.message.bot({
+      photo: true,
       delay: 1600,
       content: "どのエリアで働きたいですか？"
     })
@@ -598,6 +568,7 @@
   //じっくり北海道・東北
   function b111() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -649,6 +620,7 @@
   //じっくり関東
   function b112() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -700,6 +672,7 @@
   //じっくり北陸・甲信越
   function b113() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -748,6 +721,7 @@
   //じっくり東海・関西
   function b114() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -808,6 +782,7 @@
   //じっくり中国・四国
   function b115() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -865,6 +840,7 @@
   //じっくり九州・沖縄
   function b116() {
     botui.message.bot({
+        photo: true,
         loading: true,
         delay: 1500, //メッセージの表示タイミングをずらす
         content: '都道府県を選んでください。'
@@ -919,6 +895,7 @@
   //じっくり職種選択
   function b22() {
     botui.message.bot({
+      photo: true,
       delay: 300,
       content: "希望の職種を選んでください。"
     })
@@ -987,6 +964,7 @@
   //じっくり職種選択
   function b33() {
     botui.message.bot({
+      photo: true,
       delay: 300,
       content: "どんな働き方がいいですか？"
     })
@@ -1021,6 +999,51 @@
       })
 
       .then(load);
+  }
+
+  //最後のローディング
+  function load() {
+    //ローディング中のアイコンを表示
+    botui.message.bot({
+        photo: true,
+        loading: true,
+      })
+      .then(function(index) {
+
+        //ローディングアイコンのindexを取得
+        //このindexを使ってメッセージ情報を更新する
+        //（更新しないとローディングアイコンが消えないため…）
+        msgIndex = index;
+      });
+  }
+  //GitHubのリポジトリを取得する処理
+  function getRepositories(keyword) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', url + keyword);
+    xhr.onload = function() {
+      var result = JSON.parse(xhr.responseText);
+
+      //取得したリポジトリ数をshowMessage()に代入する
+      showMessage(result.total_count);
+    }
+    xhr.send();
+  }
+  //リポジトリ総数をメッセージに表示する処理
+  function showMessage(totalCount) {
+
+    //ローディングアイコンのindexを使ってメッセージを書き換える
+    botui.message.update(msgIndex, {
+      delay: 1000,
+      content: "あなたにオススメのお仕事が見つかりました！"
+    })
+    botui.message.bot({
+      // content: "https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_area_param=" + key
+      photo: true,
+      delay: 2000,
+      type: 'html', // this is 'text' by default
+      content: '<a href=https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_ken_param=' + key + '&srh_jobtype_param=' + key1 + '&srh_shift_param=' + keyb2 + ' target="_blank">おすすめ求人</a>'
+    });
   }
 
 
