@@ -483,7 +483,6 @@
   function b1() {
     botui.message.bot({
       photo: true,
-      loading: true,
       delay: 800,
       content: "最初の質問です。"
     })
