@@ -971,23 +971,11 @@
     botui.action.button({
         delay: 800,
         action: [{
-          text: "派遣",
-          value: "1"
+          text: "派遣・アルバイト・紹介予定派遣",
+          value: "1,2,6"
         }, {
-          text: "アルバイト",
-          value: "6"
-        }, {
-          text: "紹介予定派遣",
-          value: "2"
-        }, {
-          text: "紹介",
-          value: "3"
-        }, {
-          text: "契約社員",
-          value: "4"
-        }, {
-          text: "正社員",
-          value: "5"
+          text: "正社員・契約社員・紹介",
+          value: "3,4,5"
         }]
       })
 
