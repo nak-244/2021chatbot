@@ -119,7 +119,7 @@
   border: 0;
   padding: 0;
   margin: 0;
-  opacity: .3;
+  opacity: .9;
   border-radius: 50%;
   transition: transform .5s cubic-bezier(.16, .81, .32, 1), opacity .5s ease;
   background-size: 67% !important;
