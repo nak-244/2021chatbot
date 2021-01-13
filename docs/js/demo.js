@@ -17,31 +17,8 @@
     delay: 500,
     content: "あなたのおすすめの求人を探すために、いくつか質問をさせてね！"
   })
-  //初期メッセージ3
-  botui.message.bot({
-    photo: true,
-    delay: 1000,
-    content: "質問の個数はどのくらいがいい？"
-  })
-  //サクッと or じっくり 切り替え
-  botui.action.button({
-      delay: 1500,
-      action: [{
-        text: "サクッと答える",
-        value: "a1"
-      }, {
-        text: "じっくり答える",
-        value: "b1"
-      }]
-    })
-    .then(function(res) {
-      if (res.value == 'a1') {
-        a1();
-        end();
-      } else {
-        b1();
-      }
-    });
+.then(b1);
+;
 
   //サクッと
   function a1() {
@@ -507,7 +484,6 @@
   function b1() {
     botui.message.bot({
       photo: true,
-      loading: true,
       delay: 800,
       content: "最初の質問です。"
     })

@@ -1,0 +1,256 @@
+.spacer10 {
+  clear: both;
+  width: auto;
+  height: 10px;
+}
+
+.spacer20 {
+  clear: both;
+  width: auto;
+  height: 20px;
+}
+
+.spacer30 {
+  clear: both;
+  width: auto;
+  height: 30px;
+}
+
+/* パソコンで見たときは"pc"のclassがついた画像が表示される */
+.pc {
+  display: block !important;
+}
+
+.sp {
+  display: none !important;
+}
+
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+@media only screen and (max-width: 750px) {
+  .pc {
+    display: none !important;
+  }
+
+  .sp {
+    display: block !important;
+  }
+}
+
+.alpha a:hover img {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  -ms-filter: "alpha(opacity=70)";
+}
+
+/*
+ * テーブル調整
+ */
+table {
+  margin: 20px auto;
+}
+
+.tbl-r02 th {
+  background: #00aeef;
+  border: solid 1px #ccc;
+  color: #fff;
+  padding: 10px;
+  width: 20%;
+}
+
+.tbl-r02 td {
+  border: solid 1px #ccc;
+  padding: 10px;
+  width: 80%;
+}
+
+.tbl-r03 th {
+  background: #00aeef;
+  border: solid 1px #ccc;
+  color: #fff;
+  padding: 10px;
+  width: 20%;
+}
+
+.tbl-r03 td {
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+
+@media screen and (max-width: 919px) {
+
+  .tbl-r02 {
+    width: 100%;
+  }
+
+  .tbl-r02 th,
+  .tbl-r02 td {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+
+  .tbl-r03 {
+    width: 100%;
+  }
+
+  .tbl-r03 th,
+  .tbl-r03 td {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+
+
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+
+/*========================
+　サイトマップページ用　リンク色変更
+　========================*/
+.sitemap a:link {
+    color: #333333 ;
+}
+.sitemap a:visited {
+    color: #333333 ;
+}
+
+
+
+/*========================
+　smartphone　bottom menu
+　========================*/
+
+
+.mini-text{font-size:10px;}/*文字大きさ*/
+
+ul.bottom-menu {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width: 100%;
+    height:60px;/*高さ*/
+    margin:0;
+    padding:0;
+    background-color:#f5f5f5;/*背景色*/
+    border-top:2px solid #808080;/*バーの上の線*/
+    border-bottom:2px solid #808080;/*バーの下の線*/
+    z-index:30;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+ul.bottom-menu li {
+    float:left;
+    width:33%;
+    background-color:#f5f5f5;/*背景色*/
+    list-style-type:none;
+    text-align:center;
+    font-size:25px;/*アイコンのサイズ*/}
+
+.bottom-menu li a {
+    display: block;
+    color:#808080;/*アイコン＆文字の色*/
+    padding-top:10px;
+    padding-bottom:5px;
+    line-height:10px;
+    text-decoration:none;}
+
+.bottom-menu li a:hover {
+    color:#a9a9a9;/*マウスオーバー時の色*/}
+
+/* === 展開メニュー === */
+
+ul.menu-second-level {
+    visibility: hidden;
+    opacity: 0;
+    z-index:1;}
+
+ul.menu-second-level li a{
+    border-top:1px dashed #a9a9a9;/*展開の枠点線*/
+        font-size:15px;/*展開メニューの文字サイズ*/
+        line-height:30px;/*文字の縦幅*/}
+
+.menu-second-level li a:hover {
+    height:100%;
+    background: lightgrey;/*マウスオーバーの色*/}
+
+li.menu-width-max ul.menu-second-level {
+    position: absolute;
+    bottom: 47px;/*高さ*/
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding:0;}
+
+li.menu-width-max:hover ul.menu-second-level {
+    bottom: 47px;/*高さ*/
+    visibility: visible;
+    opacity: 1;}
+
+li.menu-width-max ul.menu-second-level li {
+    float: left;
+    width: 100%;
+    border: none;}
+
+    /* divすべてをaタグでくくるよ */
+    .special {
+      position: relative;
+      z-index: 1;
+      /* 必要であればリンク要素の重なりのベース順序指定 */
+    }
+
+    .special a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-indent: -999px;
+      z-index: 2;
+      /* 必要であればリンク要素の重なりのベース順序指定 */
+    }
+
+    .special:hover {
+      filter: alpha(opacity=70);
+      /* IE 6,7*/
+      -ms-filter: "alpha(opacity=70)";
+      /* IE 8,9 */
+      -moz-opacity: 0.7;
+      /* FF , Netscape */
+      -khtml-opacity: 0.7;
+      /* Safari 1.x */
+      opacity: 0.7;
+      zoom: 1;
+      /*IE*/
+    }
+
+
+    /* テーブル調整 */
+    .tbl-r04 td {
+      border: solid 1px #ccc;
+      padding: 10px;
+      width: 50%;
+    }
+
+    @media screen and (max-width: 640px) {
+      .last td:last-child {
+        border-bottom: solid 1px #ccc;
+        width: 100%;
+      }
+
+      .tbl-r04 {
+        width: 90%;
+      }
+
+      .tbl-r04 th,
+      .tbl-r04 td {
+        border-bottom: none;
+        display: block;
+        width: 100%;
+      }
+    }
