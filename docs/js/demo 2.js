@@ -575,6 +575,7 @@
             text: "福島県",
             value: "7"
           }, {
+            icon: 'undo',
             text: "1つ前へ戻る",
             value: "b1"
           }]
@@ -627,6 +628,7 @@
             text: "神奈川県",
             value: "14"
           }, {
+            icon: 'undo',
             text: "1つ前へ戻る",
             value: "b1"
           }]
@@ -676,6 +678,7 @@
             text: "長野県",
             value: "20"
           }, {
+            icon: 'undo',
             text: "1つ前へ戻る",
             value: "b1"
           }]
@@ -737,6 +740,7 @@
             text: "和歌山県",
             value: "30"
           }, {
+            icon: 'undo',
             text: "1つ前へ戻る",
             value: "b1"
           }]
@@ -795,6 +799,7 @@
             text: "高知県",
             value: "39"
           }, {
+            icon: 'undo',
             text: "1つ前へ戻る",
             value: "b1"
           }]
@@ -850,6 +855,7 @@
             text: "沖縄県",
             value: "47"
           }, {
+            icon: 'undo',
             text: "1つ前へ戻る",
             value: "b1"
           }]
@@ -936,7 +942,8 @@
 
       .then(b33);
   }
-  //じっくり職種選択
+
+  //じっくり雇用形態選択
   function b33() {
     botui.message.bot({
       photo: true,

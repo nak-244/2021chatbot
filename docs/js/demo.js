@@ -873,7 +873,7 @@
       })
       .then(b22);
   }
-  //じっくり職種1選択
+  //じっくり職種選択
   function b22() {
     botui.message.bot({
       photo: true,
@@ -883,51 +883,8 @@
     botui.action.button({
         delay: 800,
         action: [{
-          text: "医療・介護・福祉系",
-          value: "12"
-        }, {
           text: "オフィス事務",
           value: "1"
-        }, {
-          text: "製造",
-          value: "10"
-        }, {
-          text: "軽作業",
-          value: "9"
-        }, {
-          text: "販売",
-          value: "5"
-        }, {
-          icon: 'chevron-right',
-          text: "他の職種を選ぶ",
-          value: "999"
-        }]
-      })
-      .then(function(res) {
-        if (res.value == '999') {
-          b222();
-          end();
-        }
-
-        //入力されたキーワードを取得する
-        key1 = res.value;
-        getRepositories(key1);
-      })
-
-      .then(b33);
-  }
-  //じっくり職種2選択
-  function b222() {
-    botui.message.bot({
-      photo: true,
-      delay: 300,
-      content: "希望の職種を選んでください。"
-    })
-    botui.action.button({
-        delay: 800,
-        action: [{
-          text: "接客・サービス",
-          value: "7"
         }, {
           text: "営業",
           value: "2"
@@ -935,41 +892,49 @@
           text: "IT・エンジニア",
           value: "3"
         }, {
-          text: "飲食・フード",
-          value: "8"
+          text: "WEB・クリエイター",
+          value: "4"
         }, {
-          text: "配送・ドライバー",
-          value: "11"
+          text: "販売",
+          value: "5"
         }, {
           text: "イベント",
           value: "6"
         }, {
-          text: "WEB・クリエイター",
-          value: "4"
+          text: "接客・サービス",
+          value: "7"
         }, {
-          text: "漁業・水産",
-          value: "16"
+          text: "飲食・フード",
+          value: "8"
         }, {
-          text: "美容・ヘルスケア・その他専門職",
-          value: "14"
+          text: "軽作業",
+          value: "9"
+        }, {
+          text: "製造",
+          value: "10"
+        }, {
+          text: "配送・ドライバー",
+          value: "11"
         }, {
           text: "農業・酪農",
           value: "15"
         }, {
+          text: "医療・介護・福祉系",
+          value: "12"
+        }, {
+          text: "漁業・水産",
+          value: "16"
+        }, {
           text: "講師・インストラクター",
           value: "13"
         }, {
-          icon: 'undo',
-          text: "1つ前へ戻る",
-          value: "999"
+          text: "美容・ヘルスケア・その他専門職",
+          value: "14"
         }]
       })
 
       .then(function(res) {
-        if (res.value == '999') {
-          b22();
-          end();
-        }
+
         //入力されたキーワードを取得する
         key1 = res.value;
         getRepositories(key1);
@@ -978,7 +943,7 @@
       .then(b33);
   }
 
-  //じっくり職種選択
+  //じっくり雇用形態選択
   function b33() {
     botui.message.bot({
       photo: true,
