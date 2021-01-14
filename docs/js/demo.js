@@ -958,11 +958,18 @@
         }, {
           text: "講師・インストラクター",
           value: "13"
+        }, {
+          icon: 'undo',
+          text: "1つ前へ戻る",
+          value: "999"
         }]
       })
 
       .then(function(res) {
-
+        if (res.value == '999') {
+          b22();
+          end();
+        }
         //入力されたキーワードを取得する
         key1 = res.value;
         getRepositories(key1);
