@@ -13,35 +13,11 @@
   })
   //初期メッセージ2
   botui.message.bot({
-    photo: true,
-    delay: 500,
-    content: "あなたのおすすめの求人を探すために、いくつか質問をさせてね！"
-  })
-  //初期メッセージ3
-  botui.message.bot({
-    photo: true,
-    delay: 1000,
-    content: "質問の個数はどのくらいがいい？"
-  })
-  //サクッと or じっくり 切り替え
-  botui.action.button({
-      delay: 1500,
-      action: [{
-        text: "サクッと答える",
-        value: "a1"
-      }, {
-        text: "じっくり答える",
-        value: "b1"
-      }]
+      photo: true,
+      delay: 500,
+      content: "あなたのおすすめの求人を探すために、いくつか質問をさせてね！"
     })
-    .then(function(res) {
-      if (res.value == 'a1') {
-        a1();
-        end();
-      } else {
-        b1();
-      }
-    });
+    .then(b1);;
 
   //サクッと
   function a1() {
@@ -507,7 +483,6 @@
   function b1() {
     botui.message.bot({
       photo: true,
-      loading: true,
       delay: 800,
       content: "最初の質問です。"
     })
@@ -935,20 +910,20 @@
           text: "配送・ドライバー",
           value: "11"
         }, {
+          text: "農業・酪農",
+          value: "15"
+        }, {
           text: "医療・介護・福祉系",
           value: "12"
+        }, {
+          text: "漁業・水産",
+          value: "16"
         }, {
           text: "講師・インストラクター",
           value: "13"
         }, {
           text: "美容・ヘルスケア・その他専門職",
           value: "14"
-        }, {
-          text: "農業・酪農",
-          value: "15"
-        }, {
-          text: "漁業・水産",
-          value: "16"
         }]
       })
 
