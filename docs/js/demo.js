@@ -564,7 +564,7 @@
         delay: 2000,
         loading: true,
         type: 'html', // this is 'text' by default
-        content: '<a href=https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_ken_param=' + key + '&srh_jobtype_param=' + key1 + '&srh_shift_param=' + keyb2 + ' target="_blank">おすすめ求人</a>'
+        content: '<a href=https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_ken_param=' + key + '&srh_jobtype_param=' + key1 + '&srh_shift_param=' + keyb2 + ' target="_blank" data-izimodal-open=".iziModal_iframe">おすすめ求人</a>'
       })
     }
 
