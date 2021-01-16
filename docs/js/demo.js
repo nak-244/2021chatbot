@@ -595,8 +595,8 @@
   //続ける
   function init() {
     botui.message.bot({
-      type: 'html', 
-      content: '<input type="button" value="最初からやり直す" onclick="window.location.reload();" />'
+      type: 'html',
+      content: '<input type="button" value="最初からやり直す" onclick="window.location.reload(true);" />'
     })
   }
 
