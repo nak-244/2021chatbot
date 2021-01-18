@@ -426,6 +426,9 @@
     botui.action.button({
         delay: 1800,
         action: [{
+          text: "コールセンター",
+          value: "1&srh_jobtype_child_param=4,5"
+        }, {
           text: "オフィス事務",
           value: "1"
         }, {
@@ -574,22 +577,22 @@
       content: "もう一度やり直しますか？"
     })
     botui.action.button({
-      delay: 1800,
-      action: [{
-        icon: 'circle-thin',
-        text: 'はい',
-        value: true
-      }, {
-        icon: 'close',
-        text: 'いいえ',
-        value: false
-      }]
-    })
-    .then(function(res) {
+        delay: 1800,
+        action: [{
+          icon: 'circle-thin',
+          text: 'はい',
+          value: true
+        }, {
+          icon: 'close',
+          text: 'いいえ',
+          value: false
+        }]
+      })
+      .then(function(res) {
 
-      //「続ける」か「終了」するかの条件分岐処理
-      res.value ? init() : end();
-    });
+        //「続ける」か「終了」するかの条件分岐処理
+        res.value ? init() : end();
+      });
   }
 
   //続ける
