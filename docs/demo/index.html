@@ -695,21 +695,9 @@
       text-align: center;
     }
 
-    /* #pagetop a::before {
-      font-family: "Font Awesome 5 Free";
-      content: '\f4ad';
-      font-weight: 900;
-      font-size: 60px;
-      color: #fff;
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      top: 10px;
-      bottom: 18px;
-      right: 0;
-      left: 0;
-      margin: auto;
-    } */
+    .imgsize {
+      width: 120px;
+    }
   </style>
   <script type="text/javascript">
     $(function() {
@@ -722,10 +710,29 @@
       });
     })
   </script>
+  <style>
+    .animated {
+      animation: move-y .5s infinite alternate ease-in-out;
+      display: inline-block;
+      color: red;
+    }
+
+    @keyframes move-y {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(10px);
+      }
+    }
+  </style>
 
   <div id="pagetop">
     <a href="#" data-izimodal-open=".iziModal_iframe">
-        <img src="add/chatimg.png" width="120" />
+      <span class="animated">
+        <img src="add/chatimg.png" class="imgsize" />
+      </span>
     </a>
   </div>
   <div class="iziModal_iframe" data-izimodal-title="しごとらにお仕事相談" data-izimodal-subtitle="あなたにぴったりのお仕事を見つけよう" data-izimodal-iframeURL="https://olp.co.jp/chatbot_sys/" style="margin-right: 0px; margin-bottom: 0px;">
