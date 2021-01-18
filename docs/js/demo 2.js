@@ -19,15 +19,6 @@
     })
     .then(b1);;
 
-  //テスト
-  function end() {
-    botui.message.bot({
-      photo: true,
-      delay: 300,
-      content: "end呼ばれる？"
-    })
-  }
-
   //じっくり
   function b1() {
     botui.message.bot({
@@ -566,22 +557,55 @@
       content: "あなたにオススメのお仕事が見つかりました！"
     })
     botui.message.bot({
-      photo: true,
-      delay: 2000,
-      loading: true,
-      type: 'html', // this is 'text' by default
-      content: '<a href="https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_ken_param=' + key + '&srh_jobtype_param=' + key1 + '&srh_shift_param=' + keyb2 + '" target="_blank">おすすめ求人</a>'
-    })
-    .then(z99);
+        photo: true,
+        delay: 2000,
+        loading: true,
+        type: 'html', // this is 'text' by default
+        content: '<a href="https://sigotora.jp/index.cfm?fuseaction=job.joblist&srh_ken_param=' + key + '&srh_jobtype_param=' + key1 + '&srh_shift_param=' + keyb2 + '" target="_blank">おすすめ求人</a>'
+      })
+      .then(z99);
   }
 
-  //さいごの選択
   function z99() {
     botui.message.bot({
       loading: true,
       photo: true,
       delay: 800,
-      content: "最後の質問です。"
+      content: "もう一度やり直しますか？"
+    })
+    botui.action.button({
+      delay: 1800,
+      action: [{
+        icon: 'circle-thin',
+        text: 'はい',
+        value: true
+      }, {
+        icon: 'close',
+        text: 'いいえ',
+        value: false
+      }]
+    })
+    .then(function(res) {
+
+      //「続ける」か「終了」するかの条件分岐処理
+      res.value ? init() : end();
+    });
+  }
+
+  //続ける
+  function init() {
+    botui.message.bot({
+      type: 'html',
+      content: '<input type="button" value="最初からやり直す" onclick="window.location.reload(true);" />'
+    })
+  }
+
+  //終わる
+  function end() {
+    botui.message.bot({
+      photo: true,
+      delay: 300,
+      content: "end呼ばれる？"
     })
   }
 

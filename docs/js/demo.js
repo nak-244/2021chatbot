@@ -605,7 +605,8 @@
     botui.message.bot({
       photo: true,
       delay: 300,
-      content: "end呼ばれる？"
+      type: 'html',
+      content: '<a href="javascript:void(0)" class="iziModal-button iziModal-button-close" data-izimodal-close=""><input type="button" value="閉じる" /></a>'
     })
   }
 
