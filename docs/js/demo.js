@@ -603,10 +603,16 @@
   //終わる
   function end() {
     botui.message.bot({
+      loading: true,
       photo: true,
       delay: 300,
+      content: "ありがとうございました。下記からさらに詳しく検索することができますので、ご利用ください。"
+    })
+    botui.message.bot({
+      photo: true,
+      delay: 800,
       type: 'html',
-      content: '<a href="javascript:void(0)" class="iziModal-button iziModal-button-close" data-izimodal-close=""><input type="button" value="閉じる" /></a>'
+      content: '<a href="https://sigotora.jp/index.cfm?fuseaction=job.srchform" target="_blank">日払い・未経験歓迎の求人情報</a>'
     })
   }
 
