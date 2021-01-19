@@ -393,7 +393,8 @@
 }
 
 .iziModal.hasScroll .iziModal-wrap {
-  overflow-y: auto;
+  /* overflow-y: auto; */
+    overflow-y: 100%;
   overflow-x: hidden
 }
 
