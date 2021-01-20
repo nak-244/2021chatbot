@@ -671,14 +671,10 @@
   <!-- フッター -->
 
   <!-- チャットボタン -->
-  <script src="https://sigotora.jp/js/jquery-1.11.3.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $.noConflict();
-  </script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <link rel="stylesheet" href="https://olp.co.jp/chatbot_sys/js/iziModal.min.css">
-  <script src="https://olp.co.jp/chatbot_sys/js/iziModal.min.js" type="text/javascript"></script>
   <style type="text/css">
     #pagetop {
       width: 180px;
@@ -693,6 +689,10 @@
 
     .imgsize {
       width: 200px;
+    }
+
+    .bx-wrapper .bx-controls-direction a {
+      z-index: 999;
     }
 
     @media only screen and (max-width: 750px) {
@@ -717,7 +717,8 @@
       }
     }
   </style>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://olp.co.jp/chatbot_sys/js/iziModal.min.js" type="text/javascript"></script>
   <script type="text/javascript">
     $(function() {
       $(".iziModal_iframe").iziModal({
