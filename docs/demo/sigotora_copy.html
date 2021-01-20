@@ -1,88 +1,88 @@
-  <!-- チャットボタン -->
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="https://olp.co.jp/chatbot_sys/js/iziModal.min.css">
-  <style type="text/css">
+<!-- チャットボタン -->
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="stylesheet" href="https://olp.co.jp/chatbot_sys/js/iziModal.min.css">
+<style type="text/css">
+  #pagetop {
+    width: 180px;
+    height: 95px;
+    position: fixed;
+    right: 28px;
+    bottom: 80px;
+    /* background: #00AEEF; */
+    opacity: 0.9;
+    border-radius: 90%;
+  }
+
+  .imgsize {
+    width: 200px;
+  }
+
+  .bx-wrapper .bx-controls-direction a {
+    z-index: 999;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .imgsize {
+      width: 120px;
+    }
+
     #pagetop {
-      width: 180px;
-      height: 95px;
+      width: 100px;
+      height: 62px;
       position: fixed;
-      right: 28px;
-      bottom: 80px;
+      right: 20px;
+      bottom: 65px;
       /* background: #00AEEF; */
       opacity: 0.9;
       border-radius: 90%;
     }
 
-    .imgsize {
-      width: 200px;
+    .iziModal_iframe {
+      height: 100% !important;
+      z-index: 2000000 !important;
+    }
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://olp.co.jp/chatbot_sys/js/iziModal.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function() {
+    $(".iziModal_iframe").iziModal({
+      iframe: true,
+      fullscreen: true,
+      transitionIn: "fadeInUp",
+      transitionOut: "fadeOutDown",
+      iframeHeight: 800,
+    });
+  })
+</script>
+<style>
+  .animated {
+    animation: move-y .5s infinite alternate ease-in-out;
+    display: inline-block;
+    color: red;
+  }
+
+  @keyframes move-y {
+    from {
+      transform: translateY(0);
     }
 
-    .bx-wrapper .bx-controls-direction a {
-      z-index: 999;
+    to {
+      transform: translateY(10px);
     }
+  }
+</style>
 
-    @media only screen and (max-width: 750px) {
-      .imgsize {
-        width: 120px;
-      }
-
-      #pagetop {
-        width: 100px;
-        height: 62px;
-        position: fixed;
-        right: 20px;
-        bottom: 65px;
-        /* background: #00AEEF; */
-        opacity: 0.9;
-        border-radius: 90%;
-      }
-
-      .iziModal_iframe {
-        height: 100% !important;
-        z-index: 2000000 !important;
-      }
-    }
-  </style>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://olp.co.jp/chatbot_sys/js/iziModal.min.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(function() {
-      $(".iziModal_iframe").iziModal({
-        iframe: true,
-        fullscreen: true,
-        transitionIn: "fadeInUp",
-        transitionOut: "fadeOutDown",
-        iframeHeight: 800,
-      });
-    })
-  </script>
-  <style>
-    .animated {
-      animation: move-y .5s infinite alternate ease-in-out;
-      display: inline-block;
-      color: red;
-    }
-
-    @keyframes move-y {
-      from {
-        transform: translateY(0);
-      }
-
-      to {
-        transform: translateY(10px);
-      }
-    }
-  </style>
-
-  <div id="pagetop">
-    <a href="#" data-izimodal-open=".iziModal_iframe">
-      <span class="animated">
-        <img src="https://olp.co.jp/chatbot_sys/js/chatimg.png" class="imgsize" />
-      </span>
-    </a>
-  </div>
-  <div class="iziModal_iframe" data-izimodal-title="しごとらにお仕事相談" data-izimodal-subtitle="あなたにぴったりのお仕事を見つけよう" data-izimodal-iframeURL="https://olp.co.jp/chatbot_sys/" style="margin-right: 0px; margin-bottom: 0px;">
-  </div>
-  <!-- チャットボタン ここまで -->
+<div id="pagetop">
+  <a href="#" data-izimodal-open=".iziModal_iframe">
+    <span class="animated">
+      <img src="https://olp.co.jp/chatbot_sys/js/chatimg.png" class="imgsize" />
+    </span>
+  </a>
+</div>
+<div class="iziModal_iframe" data-izimodal-title="しごとらにお仕事相談" data-izimodal-subtitle="あなたにぴったりのお仕事を見つけよう" data-izimodal-iframeURL="https://olp.co.jp/chatbot_sys/" style="margin-right: 0px; margin-bottom: 0px;">
+</div>
+<!-- チャットボタン ここまで -->
